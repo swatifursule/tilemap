@@ -4,6 +4,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `yarn startServer`
+
+Runs the http server, to serve local files over http .<br />
+Start server before starting client app
+
 ### `yarn start`
 
 Runs the app in the development mode.<br />

@@ -3,7 +3,7 @@ import * as d3 from 'd3'
 //@ts-ignore
 import * as d3tile from 'd3-tile'
 
-
+const HTTP_SERVER = 'http://192.168.1.252:8080'
 function MapViewer() {
     let width = 200 //Math.max(960, window.innerWidth)
     let height = 200 //Math.max(500, window.innerHeight) 
@@ -79,7 +79,7 @@ function MapViewer() {
           image = image.data(tiles, (d:any) => d).join("image")
               .attr("xlink:href", (d:any) => {
                   console.log("what is my d ", d)
-                    return `http://192.168.1.252:8080/src/assets/tiled/${d[2]}/${d[0]}/${d[1]}.jpg `
+                    return `${HTTP_SERVER}/src/assets/tiled/${d[2]}/${d[0]}/${d[1]}.jpg `
               })
               //@ts-ignore
               .attr("x", ([x]) => (x + tiles.translate[0]) * tiles.scale)
